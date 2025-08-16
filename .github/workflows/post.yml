@@ -1,0 +1,33 @@
+name: Daily AI Fact
+
+on:
+  schedule:
+    # Runs daily at 10:00 AM US/Eastern (14:00 UTC)
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate site & commit
+        run: |
+          python scripts/generate_post.py
+          git config user.name "ai-facts-bot"
+          git config user.email "ai-facts-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "auto: new post $(date -u +'%Y-%m-%d')"
+            git push
+          else
+            echo "No changes to commit"
