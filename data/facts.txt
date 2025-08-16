@@ -1,0 +1,4 @@
+The first AI program was written in 1951.
+GPT stands for Generative Pre-trained Transformer.
+AI is used in self-driving cars to detect pedestrians.
+The Turing Test was proposed in 1950 to measure AI intelligence.
