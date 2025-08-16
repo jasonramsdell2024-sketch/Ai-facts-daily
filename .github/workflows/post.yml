@@ -2,12 +2,13 @@ name: Daily AI Fact
 
 on:
   schedule:
-    # Runs daily at 10:00 AM US/Eastern (14:00 UTC)
-    - cron: '0 14 * * *'
+    - cron: '0 14 * * *'   # daily 10 AM ET
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -20,14 +21,17 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate site & commit
-        run: |
-          python scripts/generate_post.py
-          git config user.name "ai-facts-bot"
-          git config user.email "ai-facts-bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add -A
-            git commit -m "auto: new post $(date -u +'%Y-%m-%d')"
-            git push
-          else
-            echo "No changes to commit"
+      - name: Generate site
+        run: python scripts/generate_post.py
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
