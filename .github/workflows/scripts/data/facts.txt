@@ -1,0 +1,61 @@
+The term “artificial intelligence” was popularized at the Dartmouth Workshop in 1956 organized by John McCarthy.
+Alan Turing’s 1950 paper “Computing Machinery and Intelligence” introduced the Imitation Game, later called the Turing Test.
+Perceptrons, introduced by Frank Rosenblatt in 1957, were early neural networks capable of basic pattern recognition.
+Backpropagation enabled efficient training of multi-layer neural networks and was widely recognized in the 1980s.
+Reinforcement learning trains agents by rewarding good actions and penalizing bad ones to maximize cumulative reward.
+In supervised learning, models learn from labeled examples to predict outputs for new, unseen inputs.
+Unsupervised learning discovers hidden structure in data, like clusters, without using labels.
+Overfitting happens when a model memorizes training data and performs poorly on new data; regularization helps prevent it.
+Dropout is a technique that randomly disables neurons during training to reduce overfitting.
+Convolutional neural networks (CNNs) are especially good at recognizing patterns in images and spatial data.
+Recurrent neural networks (RNNs) process sequences like text and time series by maintaining hidden state.
+Transformers use self-attention to model relationships between all tokens in a sequence in parallel.
+Word embeddings map words to numerical vectors so that similar meanings are closer in vector space.
+Gradient descent iteratively updates parameters in the direction that most reduces loss.
+Learning rate controls step size in gradient descent; too high diverges, too low trains slowly.
+A confusion matrix breaks down classification performance into true/false positives/negatives.
+Precision measures correctness of positive predictions; recall measures coverage of actual positives.
+The ROC curve plots true positive rate vs false positive rate; AUC summarizes performance across thresholds.
+Regularization methods like L1 and L2 add penalties to discourage overly complex models.
+Cross-validation estimates model performance by training and testing on multiple folds of the data.
+A/B testing compares two variants to see which performs better under real-world conditions.
+Transfer learning reuses knowledge from a model trained on one task to accelerate learning on another.
+Data augmentation synthetically expands training data by transforming existing examples.
+Feature scaling (standardization/normalization) helps many algorithms converge faster and perform better.
+Bias–variance tradeoff balances underfitting vs overfitting in model design.
+Anomaly detection identifies unusual data points that don’t conform to expected patterns.
+Batch normalization stabilizes and speeds up training by normalizing layer inputs.
+Attention mechanisms let models focus on the most relevant parts of the input.
+Autoencoders compress data into a latent representation and reconstruct it, useful for denoising and dimensionality reduction.
+Language models predict the next token in a sequence and can generate coherent text.
+Reinforcement learning with human feedback (RLHF) aligns model outputs with human preferences.
+Beam search explores multiple candidate sequences to improve generation quality in sequence models.
+Greedy decoding selects the most likely next token at each step, which can be fast but suboptimal.
+Temperature controls randomness in sampling: high temperature increases diversity; low temperature makes output more deterministic.
+Top-k and nucleus (top-p) sampling are strategies to limit the set of possible next tokens during generation.
+Evaluation metrics for text include BLEU, ROUGE, and METEOR; for images, Inception Score and FID are common.
+Explainable AI aims to make model decisions understandable through techniques like SHAP and LIME.
+Fairness in AI seeks to reduce unwanted bias and disparate impact in model predictions.
+Federated learning trains models across devices without centralizing the raw data.
+Differential privacy adds statistical noise to protect individual data while preserving aggregate insights.
+Knowledge distillation transfers knowledge from a large “teacher” model to a smaller “student” model.
+Self-supervised learning uses pretext tasks to learn representations without labeled data.
+Zero-shot learning handles classes never seen during training by leveraging semantic information.
+Few-shot learning adapts to new tasks from a handful of examples.
+Multi-modal models learn from multiple data types like text, images, and audio simultaneously.
+Graph neural networks operate on graph-structured data like social networks or molecules.
+Curriculum learning presents easier examples first to stabilize training on harder tasks later.
+Catastrophic forgetting occurs when a model loses old knowledge while learning new tasks; rehearsal methods can help.
+Prompt engineering guides model behavior by carefully crafting instructions and examples.
+Safety guardrails filter and shape outputs to reduce harmful or policy-violating content.
+Tokenization splits text into units like words or subwords so models can process it numerically.
+Positional encodings give transformers a sense of order in sequences.
+Residual connections help very deep networks train by allowing gradients to flow more easily.
+Layer normalization normalizes across features within a layer to stabilize training.
+Hyperparameter tuning searches for the best settings like learning rate, depth, or regularization strength.
+Early stopping halts training when validation performance stops improving to avoid overfitting.
+Currying in data pipelines means pre-configuring steps so repeated jobs run consistently and safely.
+Synthetic data can expand scarce datasets while preserving privacy when created carefully.
+Retrieval-augmented generation (RAG) combines a search component with a generator to improve factuality.
+Alignment research studies how to make advanced AI systems behave as intended.
+AI ethics encompasses issues like privacy, consent, transparency, and accountability in automated decisions.
